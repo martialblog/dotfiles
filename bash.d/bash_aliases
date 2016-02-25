@@ -1,4 +1,5 @@
 #Aliases
 alias venv='pyvenv-3.4'
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
-alias ec='emacsclient -t'
+alias ec='emacsclient'
+alias ect='emacsclient -t'
