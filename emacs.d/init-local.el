@@ -4,6 +4,8 @@
 ;; git clone https://github.com/purcell/emacs.d.git ~/.emacs.d 
 ;; Maybe use M-x package-refresh-contents 
 
+(setq default-directory (concat (getenv "HOME") "/"))
+
 ;; Whitespace mode to catch those tricky characters
 (global-whitespace-mode 1)
 
