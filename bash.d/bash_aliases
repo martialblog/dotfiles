@@ -15,4 +15,4 @@ alias tmux='tmux -2'
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 
 #i3
-alias i3lock='i3lock --color=19608B'
+alias i3lock='i3lock --color=19353D'
