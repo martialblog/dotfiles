@@ -3,6 +3,7 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
+#
 
 # i3 config file (v4)
 #
@@ -12,9 +13,13 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+#font pango:monospace 8
+font pango: Ubuntu Mono 10
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -24,6 +29,12 @@ font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# start a browser
+bindsym $mod+b exec firefox
+
+# start emacs
+bindsym $mod+o exec emacs
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -69,7 +80,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -143,10 +154,33 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+#https://color.adobe.com/de/Blue-Snowy-Night-color-theme-3953147
+#<colorclass> <border> <background> <text> <indicator> <child_border>
+client.focused          #326675 #326675 #B4CDE3 #B4CDE3
+client.focused_inactive #333333 #5F676A #333333 #484e50
+client.unfocused        #333333 #424242 #888888 #292d2e
+client.urgent           #C10004 #900000 #ffffff #900000
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    position top
+    #status_command i3status
+    status_command i3blocks -c /home/markus/.i3/i3blocks
+    colors{
+        background #232323
+        statusline #DCDCDC
+    }
 }
+
+#For Ubuntu Unity
+exec --no-startup-id unity-settings-daemon
+exec --no-startup-id nm-applet
+exec --no-startup-up feh --bg-fill /home/markus/Pictures/Wallpaper/fIrl8mr.jpg
+
+#CustomStuff
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
