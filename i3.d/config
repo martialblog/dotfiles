@@ -33,8 +33,8 @@ floating_modifier $mod
 # start a browser
 bindsym $mod+b exec firefox
 
-# start emacs
-bindsym $mod+o exec emacs
+# start nautilus
+bindsym $mod+n exec nautilus --no-desktop
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -175,13 +175,13 @@ bar {
     }
 }
 
-#For Ubuntu Unity
-exec --no-startup-id unity-settings-daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-fill /home/markus/Pictures/Wallpaper/fIrl8mr.jpg
 
 #Autostart
+exec --no-startup-id unity-settings-daemon
+exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
+
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/fIrl8mr.jpg
 exec emacs --daemon
 
 #CustomStuff
