@@ -178,7 +178,11 @@ bar {
 #For Ubuntu Unity
 exec --no-startup-id unity-settings-daemon
 exec --no-startup-id nm-applet
-exec --no-startup-up feh --bg-fill /home/markus/Pictures/Wallpaper/fIrl8mr.jpg
+exec --no-startup-id feh --bg-fill /home/markus/Pictures/Wallpaper/fIrl8mr.jpg
+
+#Autostart
+exec --no-startup-id synology-cloud-station autostart
+exec emacs --daemon
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
