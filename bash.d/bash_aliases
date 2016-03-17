@@ -7,6 +7,7 @@ alias cheat='python3 ~/.cheat.d/cheat.py'
 #Emacs
 alias ec='emacsclient'
 alias ect='emacsclient -t'
+alias ecc='emacsclient -c'
 
 #tmux
 alias tmux='tmux -2'
