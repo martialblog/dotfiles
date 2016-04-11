@@ -169,22 +169,39 @@ bar {
     position top
     #status_command i3status
     status_command i3blocks -c /home/markus/.i3/i3blocks
-    colors{
+    colors {
         background #232323
         statusline #DCDCDC
     }
-}
 
+}
 
 #Autostart
 exec --no-startup-id unity-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
 
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/fIrl8mr.jpg
-exec emacs --daemon
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/science.png
+#exec emacs --daemon
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock --color=19353D, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym p exec --no-startup-id systemctl poweroff, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    }
+
+bindsym $mod+Pause mode "$mode_system"
+bindsym XF86PowerOff mode "$mode_system"
