@@ -14,4 +14,7 @@
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
+;;PYTHON
+(add-hook 'python-mode-hook 'jedi:setup)
+
 (provide 'init-local)
