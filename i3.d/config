@@ -5,6 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+new_window pixel 1
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -47,7 +49,7 @@ bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -177,10 +179,10 @@ bar {
 }
 
 #Autostart
+exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id unity-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
-
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/science.png
 #exec emacs --daemon
 
