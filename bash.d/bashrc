@@ -4,7 +4,7 @@
 
 if [ -f ~/CloudStation/Notes/notes.org ]; then
     echo -e "\033[0;34mOpen Tasks\033[0m"
-    grep --color 'TODO' ~/CloudStation/Notes/notes.org
+    grep --color '** TODO' ~/CloudStation/Notes/notes.org
     echo ""
 fi
 
