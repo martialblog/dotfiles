@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-new_window pixel 1
+new_window pixel 3
 
 # i3 config file (v4)
 #
@@ -146,10 +146,10 @@ mode "resize" {
         bindsym odiaeresis resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -183,7 +183,7 @@ exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id unity-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/science.png
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/future.png
 #exec emacs --daemon
 
 #CustomStuff
