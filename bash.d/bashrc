@@ -2,6 +2,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -f ~/CloudStation/Notes/notes.org ]; then
+    echo "Open Tasks"
+    grep 'TODO' ~/CloudStation/Notes/notes.org
+    echo ""
+fi
+
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
