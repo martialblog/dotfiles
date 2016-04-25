@@ -30,14 +30,6 @@ markup=none
 
 # Network interface monitoring
 #
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#instance=wlan0
-color=#009B77
-interval=10
-separator=false
-
 [wifi]
 #instance=wlp3s0
 interval=10
@@ -46,6 +38,14 @@ separator=false
 [bandwidth]
 #instance=eth0
 interval=5
+
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+#instance=wlan0
+color=#009B77
+interval=10
+separator=true
 
 # Memory usage
 #
@@ -90,6 +90,7 @@ interval=15
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
+color=#007fff
 #label=VOL
 label=♪
 instance=Master
@@ -102,8 +103,8 @@ signal=1
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT
-#label=⚡
+#label=BAT
+label=⚡
 #instance=1
 interval=120
 
