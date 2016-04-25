@@ -28,19 +28,24 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Volume indicator
+# Network interface monitoring
 #
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-[volume]
-#label=VOL
-label=♪
-instance=Master
-command=amixer get Master | grep -E -o '[0-9]{1,3}?%' | head -1
-#instance=PCM
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+#instance=wlan0
+color=#009B77
+interval=10
+separator=false
+
+[wifi]
+#instance=wlp3s0
+interval=10
+separator=false
+
+[bandwidth]
+#instance=eth0
 interval=5
-signal=1
 
 # Memory usage
 #
@@ -66,25 +71,6 @@ label=HOME
 #instance=/mnt/data
 interval=360
 
-# Network interface monitoring
-#
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#instance=wlan0
-color=#009B77
-interval=10
-separator=false
-
-[wifi]
-#instance=wlp3s0
-interval=10
-separator=false
-
-[bandwidth]
-#instance=eth0
-interval=5
-
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
@@ -97,6 +83,20 @@ min_width=CPU: 100.00%
 
 #[load_average]
 #interval=10
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+#label=VOL
+label=♪
+instance=Master
+command=amixer get Master | grep -E -o '[0-9]{1,3}?%' | head -1
+#instance=PCM
+interval=5
+signal=1
 
 # Battery indicator
 #
