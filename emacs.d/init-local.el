@@ -15,6 +15,11 @@
 (global-set-key [f8] 'neotree-toggle)
 
 ;;PYTHON
-(add-hook 'python-mode-hook 'jedi:setup)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+(eval-after-load 'python
+  '(progn
+     (setq elpy-rpc-python-command "python3")
+     (setq python-shell-interpreter "python3")
+     (elpy-enable)))
 
 (provide 'init-local)
