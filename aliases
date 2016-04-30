@@ -13,9 +13,6 @@ alias ec='emacsclient'
 alias ect='emacsclient -t'
 alias ecc='emacsclient -c'
 
-#tmux
-alias tmux='tmux -2'
-
 #Other
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 alias atom_packages='apm list --installed --bare | grep '^[^@]\+' -o'
