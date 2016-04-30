@@ -15,7 +15,6 @@ alias ecc='emacsclient -c'
 
 #Other
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
-alias atom_packages='apm list --installed --bare | grep '^[^@]\+' -o'
 alias nautilus='nautilus --no-desktop'
 alias todo='grep TODO ~/CloudStation/Notes/notes.org'
 
