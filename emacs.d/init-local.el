@@ -10,12 +10,11 @@
 (global-whitespace-mode 1)
 
 ;; Neotree
-(add-to-list 'load-path "~/.emacs.d/elpa/neotree-20160214.532/")
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;;(add-to-list 'load-path "~/.emacs.d/elpa/neotree-20160214.532/")
+;;(require 'neotree)
+;;(global-set-key [f8] 'neotree-toggle)
 
 ;;PYTHON
-;;(add-hook 'python-mode-hook 'jedi:setup)
 (eval-after-load 'python
   '(progn
      (setq elpy-rpc-python-command "python3")
