@@ -1,15 +1,21 @@
 #!/bin/sh
 
-# Since I don't wanna use Puppet I'm gonna be oldschool and Shell Script it.
+# Since I don't wanna use Puppet I'm gonna be oldschool and script it.
 
-# apt-get install emacs24 i3 i3blocks virtualbox vagrant python3-pip zsh
-# unity-greeter-badges
+# apt installation
+sudo apt-get install emacs i3 i3blocks virtualbox vagrant python3-pip zsh unity-greeter-badges git
 
-# pip3 install nltk jedi rope py3k importmagic autopep8 yapf flake8
-# elpy for emacs
+# Python Stuff
+pip3 --user install nltk jedi rope py3k importmagic autopep8 yapf flake8
 
-# Cloudstation.deb
-
+#TODO
+# Install elpy for emacs
+# Get and install cloudstation.deb
 # git clone stuff (purcell, config)
-# oh my zsh
-# syslinks
+
+mkdir ~/github
+
+git clone https://github.com/purcell/emacs.d ~/.emacs.d
+git clone https://github.com/martialblog/config ~/github/config
+
+# Syslinks
