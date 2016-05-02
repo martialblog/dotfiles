@@ -19,5 +19,9 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 # TODO: Dynamic link?
 wget -P /home/markus/Downloads/ https://global.download.synology.com/download/Tools/CloudStationDrive/3.2-3501/Ubuntu/Installer/x86_64/synology-cloud-station-3501.x86_64.deb
 
-#TODO
 # Syslinks
+# Why the f cant I remember this?
+#ln -s {/path/to/file-name} {link-name}
+ln -s /home/markus/github/config/aliases ~/.aliases
+ln -s /home/markus/github/config/xmodmap ~/.xmodmap
+ln -s /home/markus/github/config/i3.d/ ~/.i3
