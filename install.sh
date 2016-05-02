@@ -12,9 +12,12 @@ mkdir ~/github
 git clone https://github.com/purcell/emacs.d ~/.emacs.d
 git clone https://github.com/martialblog/config ~/github/config
 
-#TODO
+# oh my zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 # Get cloudstation.deb
+# TODO: Dynamic link?
 wget -P /home/markus/Downloads/ https://global.download.synology.com/download/Tools/CloudStationDrive/3.2-3501/Ubuntu/Installer/x86_64/synology-cloud-station-3501.x86_64.deb
 
+#TODO
 # Syslinks
-# Install elpy for emacs
