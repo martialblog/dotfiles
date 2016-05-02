@@ -16,7 +16,7 @@ alias ecc='emacsclient -c'
 #Other
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 alias nautilus='nautilus --no-desktop'
-alias todo='grep TODO ~/CloudStation/Notes/notes.org'
+alias todo='grep "** TODO" ~/CloudStation/Notes/notes.org'
 
 #i3
 alias i3lock='i3lock --color=19353D'
