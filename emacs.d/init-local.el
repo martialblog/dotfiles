@@ -9,6 +9,9 @@
 ;; Whitespace mode to catch those tricky characters
 (global-whitespace-mode 1)
 
+;; xclip mode
+(xclip-mode 1)
+
 ;; Neotree
 ;;(add-to-list 'load-path "~/.emacs.d/elpa/neotree-20160214.532/")
 ;;(require 'neotree)
