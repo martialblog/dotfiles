@@ -2,7 +2,7 @@
 
 #Python
 alias venv='pyvenv-3.4'
-alias cheat='python3 ~/.cheat.d/cheat.py'
+alias cheat='python3 ~/.cheat.d/cheat/cheat.py'
 alias p2='python2.7'
 alias p3='python3'
 alias p3.5='python3.5'
