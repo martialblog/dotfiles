@@ -34,7 +34,7 @@ floating_modifier $mod
 
 # start a browser
 bindsym $mod+b exec firefox
-bindsym $mod+p exec firefox -private
+bindsym $mod+Shift+b exec firefox -private
 
 # start nautilus
 bindsym $mod+n exec nautilus --no-desktop
