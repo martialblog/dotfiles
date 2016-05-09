@@ -45,6 +45,12 @@ interval=5
 #instance=wlan0
 color=#009B77
 interval=10
+separator=false
+
+[ssid]
+command=echo "($(iw dev wlp2s0 link | grep SSID | cut -d " " -f 2-))"
+color=#008B77
+interval=10
 separator=true
 
 # Memory usage
