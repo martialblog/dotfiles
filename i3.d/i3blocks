@@ -104,7 +104,7 @@ signal=1
 
 [mute]
 color=#ff8000
-command=amixer get Master | grep 'off' | cut -d ' ' -f 8 | tr -d '[]'
+command=amixer get Master | grep 'off' | cut -d ' ' -f 8 | sed 's/\[off\]/muted/'
 interval=5
 separator=true
 
