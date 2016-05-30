@@ -42,16 +42,14 @@ interval=5
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-#instance=wlan0
 color=#009B77
 interval=10
 separator=false
 
 [ssid]
-command=echo "($(iw dev wlp2s0 link | grep SSID | cut -d " " -f 2-))"
+command=iw dev wlp2s0 link | grep SSID | cut -d " " -f 2-
 color=#008B77
 interval=10
-separator=true
 
 # Memory usage
 #
@@ -85,7 +83,6 @@ interval=360
 label=CPU
 interval=15
 #min_width=CPU: 10.00%
-#separator=false
 
 #[load_average]
 #interval=10
@@ -104,6 +101,12 @@ command=amixer get Master | grep -E -o '[0-9]{1,3}?%' | head -1
 #instance=PCM
 interval=5
 signal=1
+
+[mute]
+color=#ff8000
+command=amixer get Master | grep 'off' | cut -d ' ' -f 8 | tr -d '[]'
+interval=5
+separator=true
 
 # Battery indicator
 #
