@@ -33,8 +33,8 @@ font pango: Ubuntu Mono 10
 floating_modifier $mod
 
 # start a browser
-bindsym $mod+b exec firefox
-bindsym $mod+Shift+b exec firefox -private
+bindsym $mod+b exec vivaldi
+bindsym $mod+Shift+b exec vivaldi --incognito
 
 # start nautilus
 bindsym $mod+n exec nautilus --no-desktop
