@@ -178,10 +178,11 @@ bar {
 }
 
 #Autostart
+#exec --no-startup-id unity-settings-daemon
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id unity-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
+exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
