@@ -17,8 +17,8 @@ alias ecc='emacsclient -c'
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 alias nautilus='nautilus --no-desktop'
 alias todo='grep "** TODO" ~/CloudStation/Notes/notes.org'
-alias us='setxkbmap us'
-alias de='setxkbmap de'
+alias us='setxkbmap -option ctrl:nocaps us'
+alias de='setxkbmap -option ctrl:nocaps de'
 
 
 #i3
