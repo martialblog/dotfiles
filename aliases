@@ -19,7 +19,7 @@ alias nautilus='nautilus --no-desktop'
 alias todo='grep "** TODO" ~/CloudStation/Notes/notes.org'
 alias us='setxkbmap -option ctrl:nocaps us'
 alias de='setxkbmap -option ctrl:nocaps de'
-
+alias ber='bundle exec rake'
 
 #i3
 alias i3lock='i3lock --color=19353D'
