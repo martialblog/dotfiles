@@ -51,7 +51,7 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git todo)
+plugins=(git todo vagrant common-aliases)
 
 # User configuration
 
@@ -87,6 +87,3 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.aliases
 
-# xmodmap
-
-xmodmap $HOME/.xmodmap
