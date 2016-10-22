@@ -2,7 +2,7 @@
 # Since I don't wanna use Puppet I'm gonna be oldschool and script it.
 
 # apt installation
-sudo apt-get install emacs i3 i3blocks virtualbox vagrant python3-pip zsh unity-greeter-badges git xclip
+sudo apt-get install emacs i3 i3blocks virtualbox vagrant python3-pip zsh unity-greeter-badges git xclip xcompmgr
 
 # Python Stuff
 pip3 --user install nltk jedi rope py3k importmagic autopep8 yapf flake8
