@@ -199,9 +199,9 @@ mode "resize" {
 
 #https://color.adobe.com/de/Blue-Snowy-Night-color-theme-3953147
 #<colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused          #228B22 #228B22 #B4CDE3 #228B22
-client.focused_inactive #333333 #424242 #333333 #292d2e
-client.unfocused        #333333 #424242 #888888 #292d2e
+client.focused          #DB9E36 #DB9E36 #B4CDE3 #DB9E36
+client.focused_inactive #333333 #424242 #333333 #333333
+client.unfocused        #333333 #424242 #888888 #333333
 client.urgent           #C10004 #900000 #ffffff #900000
 
 bindsym $mod+r mode "resize"
@@ -226,7 +226,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id xcompmgr -c -n
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/forest.png
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/bluefence.png
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
