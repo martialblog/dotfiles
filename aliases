@@ -16,10 +16,9 @@ alias ecc='emacsclient -c'
 #Other
 alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 alias nautilus='nautilus --no-desktop'
-alias todo='grep "** TODO" ~/CloudStation/Notes/notes.org'
 alias us='setxkbmap -option ctrl:nocaps us'
 alias de='setxkbmap -option ctrl:nocaps de'
 alias ber='bundle exec rake'
 
 #i3
-alias i3lock='i3lock -i /home/markus/Pictures/Wallpaper/bluefence.png'
+alias i3lock='i3lock -i /home/markus/Pictures/Wallpaper/eclipse.png'
