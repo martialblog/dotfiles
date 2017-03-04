@@ -5,6 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+bindcode Shift+50 exec /home/markus/.i3/toggle_keymap.sh
+bindcode Shift+62 exec /home/markus/.i3/toggle_keymap.sh
+
 # i3 gaps configuration
 gaps inner 10
 smart_gaps on
@@ -199,7 +202,7 @@ mode "resize" {
 
 #https://color.adobe.com/de/Blue-Snowy-Night-color-theme-3953147
 #<colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused          #DB9E36 #DB9E36 #B4CDE3 #DB9E36
+client.focused          #16A6E0 #16A6E0 #B4CDE3 #16A6E0
 client.focused_inactive #333333 #424242 #333333 #333333
 client.unfocused        #333333 #424242 #888888 #333333
 client.urgent           #C10004 #900000 #ffffff #900000
@@ -226,7 +229,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station autostart
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id xcompmgr -c -n
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/eclipse.png
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/space.png
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute

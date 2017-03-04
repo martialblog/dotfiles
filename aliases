@@ -21,4 +21,4 @@ alias de='setxkbmap -option ctrl:nocaps de'
 alias ber='bundle exec rake'
 
 #i3
-alias i3lock='i3lock -i /home/markus/Pictures/Wallpaper/eclipse.png'
+alias i3lock='i3lock -i /home/markus/Pictures/Wallpaper/space.png'
