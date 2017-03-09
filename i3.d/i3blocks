@@ -51,6 +51,11 @@ command=iw dev wlp2s0 link | grep SSID | cut -d " " -f 2-
 color=#008B77
 interval=10
 
+[keymap]
+command=$HOME/.i3/query_keymap.sh
+color=#007fff
+interval=2
+
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
