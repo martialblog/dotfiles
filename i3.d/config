@@ -202,24 +202,24 @@ mode "resize" {
 
 #https://color.adobe.com/de/Blue-Snowy-Night-color-theme-3953147
 #<colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused          #16A6E0 #16A6E0 #B4CDE3 #16A6E0
-client.focused_inactive #333333 #424242 #333333 #333333
-client.unfocused        #333333 #424242 #888888 #333333
-client.urgent           #C10004 #900000 #ffffff #900000
 
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position top
+  position top
     #status_command i3status
     status_command i3blocks -c /home/markus/.i3/i3blocks
-    colors {
-        background #000000
-        statusline #7f7f7f
-    }
-
+  colors {
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
 
 #Autostart
@@ -252,3 +252,8 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 bindsym XF86PowerOff mode "$mode_system"
+
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
