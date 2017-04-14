@@ -5,17 +5,17 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-bindcode Shift+50 exec /home/markus/.i3/toggle_keymap.sh
-bindcode Shift+62 exec /home/markus/.i3/toggle_keymap.sh
+bindcode Shift+50 exec /home/markus/.config/i3/toggle_keymap.sh
+bindcode Shift+62 exec /home/markus/.config/i3/toggle_keymap.sh
 
 # i3 gaps configuration
-gaps inner 10
-smart_gaps on
+# gaps inner 10
+# smart_gaps on
 
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+# set $mode_gaps Gaps: (o) outer, (i) inner
+# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -209,27 +209,26 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   position top
-    #status_command i3status
-    status_command i3blocks -c /home/markus/.i3/i3blocks
+    status_command i3blocks -c /home/markus/.config/i3/i3blocks
   colors {
     separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
-    active_workspace #333333 #333333 #ffffff
+    background #000000
+    statusline #ffffff
+    focused_workspace #d70a53 #d70a53 #ffffff
+    active_workspace #333333 #333333 #888888
     inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    urgent_workspace #eb709b #eb709b #ffffff
   }
 }
 
 #Autostart
-#exec --no-startup-id unity-settings-daemon
+# exec --no-startup-id unity-settings-daemon
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
-exec --no-startup-id synology-cloud-station autostart
+exec --no-startup-id synology-cloud-station-drive
 exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xcompmgr -c -n
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/space.png
+# exec --no-startup-id xcompmgr -c -n
+# exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpaper/future.png
 
 #CustomStuff
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
@@ -253,7 +252,7 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 bindsym XF86PowerOff mode "$mode_system"
 
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+client.focused #d70a53 #d70a53 #ffffff #8c0333
+client.focused_inactive #333333 #333333 #888888 #333333
+client.unfocused #333333 #333333 #888888 #333333
+client.urgent #eb709b #eb709b #ffffff #eb709b
