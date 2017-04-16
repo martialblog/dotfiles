@@ -3,9 +3,17 @@ new_window pixel 3
 set $mod Mod4
 font pango:DejaVu Sans Mono 9
 
-
 bar {
     position top
+  colors {
+    separator #666666
+    background #000000
+    statusline #ffffff
+    focused_workspace #d70a53 #d70a53 #ffffff
+    active_workspace #333333 #333333 #888888
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #eb709b #eb709b #ffffff
+  }
 }
 
 
