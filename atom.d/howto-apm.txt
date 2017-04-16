@@ -1,2 +1,0 @@
-apm list --installed --bare
-apm install --package-file

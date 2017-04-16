@@ -1,6 +1,0 @@
-autocomplete-java
-autocomplete-python
-git-plus
-linter
-linter-pep8
-script
