@@ -16,7 +16,6 @@ bar {
   }
 }
 
-
 # Status Bar
 exec yabar
 
@@ -44,6 +43,9 @@ exec --no-startup-id setxkbmap -option ctrl:nocaps
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+bindsym XF86MonBrightnessUp exec python3 ~/.config/i3/backlight.py -i
+bindsym XF86MonBrightnessDown exec python3 ~/.config/i3/backlight.py -d
 
 bindsym $mod+Pause mode "$mode_system"
 bindsym XF86PowerOff mode "$mode_system"
@@ -175,7 +177,6 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
     }
-
 
 client.focused #d70a53 #d70a53 #ffffff #8c0333
 client.focused_inactive #333333 #333333 #888888 #333333
