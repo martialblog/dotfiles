@@ -52,7 +52,7 @@ color=#008B77
 interval=10
 
 [keymap]
-command=$HOME/.i3/query_keymap.sh
+command=setxkbmap -query | awk '$0~/layout/{print $2}'
 color=#007fff
 interval=2
 
@@ -109,7 +109,7 @@ signal=1
 
 [mute]
 color=#ff8000
-command=amixer get Master | grep 'off' | cut -d ' ' -f 8 | sed 's/\[off\]/muted/'
+command=amixer get Master | awk '$0~/%/{print $6}' | tr -d '[]'
 interval=5
 separator=true
 
