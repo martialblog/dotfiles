@@ -1,0 +1,28 @@
+[user]
+	email = markus@martialblog.de
+	name = Markus Opolka
+[push]
+	default = simple
+[core]
+	editor = emacsclient -t -a=\\\"\\\"
+[status]
+	short = true
+[merge]
+    ff = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = yellow
+    untracked = red
+
