@@ -48,7 +48,7 @@ def main(args):
     backlight = get_brightness()
 
     if print_it:
-        print("{0}%".format(int(backlight*100)))
+        print("BRI {0}%".format(int(backlight*100)))
         exit(0)
 
     if increase and backlight < 1:
