@@ -18,7 +18,8 @@ alias sshuni='~/CloudStation/Studium/SSHUniNetz.sh'
 alias nautilus='nautilus --no-desktop'
 alias us='setxkbmap -option ctrl:nocaps us'
 alias de='setxkbmap -option ctrl:nocaps de'
-alias ber='bundle exec rake'
+alias ber='sudo bundle exec rake'
+alias sshuni='ssh bi40resu@dialog.rrze.uni-erlangen.de'
 
 #i3
 alias i3lock='i3lock -i $HOME/Pictures/lock.png'
