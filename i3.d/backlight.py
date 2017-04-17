@@ -3,25 +3,27 @@
 
 from argparse import ArgumentParser
 from subprocess import check_output
-from sys import argv
+from sys import argv, exit
 from os import system
 
 
-def commandline(args):
+def commandline():
 
-    parser = ArgumentParser(description='Changeing backlight')
+    parser = ArgumentParser(description='Script to adjust backlight from console')
 
     parser.add_argument("-i", "--inc",
-                        help="Increase",
+                        help="Increase backlight level 0.1",
                         action="store_true")
 
     parser.add_argument("-d", "--dec",
-                        help="Decrease",
+                        help="Decrease backlight level 0.1",
                         action="store_true")
 
-    parser.set_defaults(verbose=False)
+    parser.add_argument("-p", "--pri",
+                        help="Print current backlight level",
+                        action="store_true")
 
-    return parser.parse_args(args)
+    return parser.parse_args()
 
 
 def set_brightness(n):
@@ -41,18 +43,25 @@ def main(args):
 
     increase = args.inc
     decrease = args.dec
+    print_it = args.pri
 
     backlight = get_brightness()
+
+    if print_it:
+        print("{0}%".format(int(backlight*100)))
+        exit(0)
 
     if increase and backlight < 1:
         backlight = backlight + 0.1
         set_brightness(backlight)
+        exit(0)
 
     if decrease and backlight > 0.1:
         backlight = backlight - 0.1
         set_brightness(backlight)
+        exit(0)
 
 if __name__ == "__main__":
 
-    args = commandline(argv[1:])
+    args = commandline()
     main(args)
