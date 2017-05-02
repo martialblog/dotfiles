@@ -51,3 +51,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [ -f $HOME/.aliases ]; then
     source $HOME/.aliases
 fi
+
+# added by travis gem
+[ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
