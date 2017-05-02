@@ -7,8 +7,6 @@
     editor = emacsclient -t -a=\\\"\\\"
 [status]
     short = true
-[merge]
-    ff = false
 [color "branch"]
     current = yellow reverse
     local = yellow
