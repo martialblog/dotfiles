@@ -4,15 +4,15 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 9
 
 bar {
-    position top
+  position top
   colors {
     separator #666666
-    background #000000
-    statusline #ffffff
-    focused_workspace #d70a53 #d70a53 #ffffff
-    active_workspace #333333 #333333 #888888
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
     inactive_workspace #333333 #333333 #888888
-    urgent_workspace #eb709b #eb709b #ffffff
+    urgent_workspace #2f343a #900000 #ffffff
   }
 }
 
@@ -178,7 +178,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
     }
 
-client.focused #d70a53 #d70a53 #ffffff #8c0333
-client.focused_inactive #333333 #333333 #888888 #333333
-client.unfocused #333333 #333333 #888888 #333333
-client.urgent #eb709b #eb709b #ffffff #eb709b
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
