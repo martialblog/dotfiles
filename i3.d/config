@@ -27,8 +27,8 @@ bindcode Shift+50 exec ~/.config/i3/toggle_keymap.sh
 bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 
 # Browser
-bindsym $mod+b exec vivaldi
-bindsym $mod+Shift+b exec vivaldi --incognito
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec firefox --private-window
 
 # Nautilis
 bindsym $mod+n exec nautilus --no-desktop
