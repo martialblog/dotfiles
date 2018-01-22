@@ -1,7 +1,7 @@
 # i3wm config
 new_window pixel 3
 set $mod Mod4
-font pango:DejaVu Sans Mono 9
+# font pango:DejaVu Sans Mono 9
 
 bar {
   position top
@@ -17,7 +17,7 @@ bar {
 }
 
 # Status Bar
-exec yabar
+# exec yabar
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -27,8 +27,8 @@ bindcode Shift+50 exec ~/.config/i3/toggle_keymap.sh
 bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 
 # Browser
-bindsym $mod+b exec firefox
-bindsym $mod+Shift+b exec firefox --private-window
+bindsym $mod+b exec /home/markus/Downloads/firefox/firefox
+bindsym $mod+Shift+b exec /home/markus/Downloads/firefix/firefox --private-window
 
 # Nautilis
 bindsym $mod+n exec nautilus --no-desktop
@@ -39,13 +39,16 @@ exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station-drive
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
+# Enable TouchPad
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+
 # Function Keys
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
-bindsym XF86MonBrightnessUp exec python3 ~/.config/i3/backlight.py -i
-bindsym XF86MonBrightnessDown exec python3 ~/.config/i3/backlight.py -d
+# bindsym XF86MonBrightnessUp exec python3 ~/.config/i3/backlight.py -i
+# bindsym XF86MonBrightnessDown exec python3 ~/.config/i3/backlight.py -d
 
 bindsym $mod+Pause mode "$mode_system"
 bindsym XF86PowerOff mode "$mode_system"
@@ -178,7 +181,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
     }
 
-client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused #0088CC #0088CC #0088cc #0088cc
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
