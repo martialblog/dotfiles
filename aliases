@@ -22,4 +22,4 @@ alias sshuni='ssh bi40resu@dialog.rrze.uni-erlangen.de'
 alias be='bundle exec'
 
 #i3
-alias i3lock='i3lock -i $HOME/Pictures/lock.png'
+alias i3lock='i3lock'
