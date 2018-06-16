@@ -1,7 +1,7 @@
 # i3wm config
+gaps inner 10
 new_window pixel 3
 set $mod Mod4
-# font pango:DejaVu Sans Mono 9
 
 bar {
   position top
@@ -9,7 +9,7 @@ bar {
     separator #666666
     background #222222
     statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
+    focused_workspace #CC4400 #CC4400 #ffffff
     active_workspace #333333 #333333 #ffffff
     inactive_workspace #333333 #333333 #888888
     urgent_workspace #2f343a #900000 #ffffff
@@ -17,7 +17,7 @@ bar {
 }
 
 # Status Bar
-# exec yabar
+exec yabar
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -27,18 +27,19 @@ bindcode Shift+50 exec ~/.config/i3/toggle_keymap.sh
 bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 
 # Browser
-bindsym $mod+b exec /home/markus/Downloads/firefox/firefox
-bindsym $mod+Shift+b exec chromium --incognito
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec firefox --private-window
 
 # Nautilis
 bindsym $mod+n exec nautilus --no-desktop
 
 #Autostart
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station-drive
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/mars.png
 
 # Enable TouchPad
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
@@ -182,7 +183,44 @@ mode "$mode_system" {
     bindsym Escape mode "default"
     }
 
-client.focused #0088CC #0088CC #0088cc #0088cc
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+client.focused #CC4400 #CC4400 #CC4400 #CC4400
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
