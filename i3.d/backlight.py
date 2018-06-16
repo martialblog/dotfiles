@@ -28,7 +28,7 @@ def commandline():
 
 def set_brightness(n):
 
-    system("xrandr --output LVDS --brightness {:0.2f}".format(n))
+    system("xrandr --output eDP-1 --brightness {:0.2f}".format(n))
 
 
 def get_brightness():
