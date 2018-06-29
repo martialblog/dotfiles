@@ -5,6 +5,7 @@
     default = simple
 [core]
     editor = emacsclient -t -a=\\\"\\\"
+    pager = less -FRX
 [status]
     short = true
 [color "branch"]
