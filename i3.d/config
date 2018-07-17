@@ -28,18 +28,18 @@ bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 
 # Browser
 bindsym $mod+b exec firefox
-bindsym $mod+Shift+b exec firefox --private-window
+bindsym $mod+Shift+b exec chromium-browser --incognito
 
 # Nautilis
 bindsym $mod+n exec nautilus --no-desktop
 
 #Autostart
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/mars.png
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id synology-cloud-station-drive
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/mars.png
 
 # Enable TouchPad
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
