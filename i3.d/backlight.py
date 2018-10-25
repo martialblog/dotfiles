@@ -33,7 +33,7 @@ def set_brightness(n):
 
 def get_brightness():
 
-    cmd = "xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '",
+    cmd = 'cat /sys/class/backlight/acpi_video0/brightness'
     xrandr_get = check_output(cmd, shell=True)
 
     return float(xrandr_get.decode("utf-8").strip())
@@ -48,7 +48,7 @@ def main(args):
     backlight = get_brightness()
 
     if print_it:
-        print("BRI {0}%".format(int(backlight*100)))
+        print("BRI {0}%".format(int(backlight*10.0)))
         exit(0)
 
     if increase and backlight < 1:
