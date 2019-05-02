@@ -23,3 +23,6 @@ alias be='bundle exec'
 
 #i3
 alias i3lock='i3lock -f -c 5E2750'
+
+#mutt
+alias mutt='neomutt'
