@@ -40,12 +40,15 @@ ZSH_THEME="lambda"
 plugins=(git vagrant docker common-aliases)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/markus/.local/bin"
 
 source $ZSH/oh-my-zsh.sh
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# golang
+export GOPATH=$HOME/github/go
 
 # aliases
 if [ -f $HOME/.aliases ]; then
