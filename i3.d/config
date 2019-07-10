@@ -30,8 +30,11 @@ bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+b exec chromium-browser --incognito
 
-# Nautilis
+# Nautilus
 bindsym $mod+n exec nautilus --no-desktop
+
+# Settings
+bindsym $mod+c exec gnone-control-center
 
 #Autostart
 exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/mars.png

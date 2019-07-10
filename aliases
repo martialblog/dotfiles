@@ -20,6 +20,7 @@ alias de='setxkbmap -option ctrl:nocaps de'
 alias ber='sudo bundle exec rake'
 alias sshuni='ssh bi40resu@dialog.rrze.uni-erlangen.de'
 alias be='bundle exec'
+alias control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 
 #i3
 alias i3lock='i3lock -f -c 5E2750'
