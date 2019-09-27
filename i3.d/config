@@ -1,5 +1,5 @@
 # i3wm config
-gaps inner 10
+# gaps inner 10
 new_window pixel 3
 set $mod Mod4
 

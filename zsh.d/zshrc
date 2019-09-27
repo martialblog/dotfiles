@@ -55,5 +55,6 @@ if [ -f $HOME/.aliases ]; then
     source $HOME/.aliases
 fi
 
-# added by travis gem
-[ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
+if [ -d "/opt/adb/platform-tools" ] ; then
+ export PATH="/opt/adb/platform-tools:$PATH"
+fi
