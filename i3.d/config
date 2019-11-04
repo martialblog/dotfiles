@@ -28,7 +28,7 @@ bindcode Shift+62 exec ~/.config/i3/toggle_keymap.sh
 
 # Browser
 bindsym $mod+b exec firefox
-bindsym $mod+Shift+b exec firefox --private
+bindsym $mod+Shift+b exec chromium-browser --incognito
 
 # Nautilus
 bindsym $mod+n exec nautilus --no-desktop
@@ -37,7 +37,7 @@ bindsym $mod+n exec nautilus --no-desktop
 bindsym $mod+c exec gnone-control-center
 
 #Autostart
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/hex-000097.png
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/pixel.jpg
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
