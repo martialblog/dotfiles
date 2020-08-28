@@ -9,7 +9,7 @@ bar {
     separator #666666
     background #222222
     statusline #dddddd
-    focused_workspace #CC4400 #CC4400 #ffffff
+    focused_workspace #0388A6 #0388A6 #ffffff
     active_workspace #333333 #333333 #ffffff
     inactive_workspace #333333 #333333 #888888
     urgent_workspace #2f343a #900000 #ffffff
@@ -37,7 +37,7 @@ bindsym $mod+n exec nautilus --no-desktop
 bindsym $mod+c exec gnone-control-center
 
 #Autostart
-exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/pixel.jpg
+exec --no-startup-id feh --bg-scale /home/markus/Pictures/Wallpapers/spaceblue-smaller.png
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
@@ -223,7 +223,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-client.focused #CC4400 #CC4400 #CC4400 #CC4400
+client.focused #0388A6 #0388A6 #0388A6 #0388A6
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
