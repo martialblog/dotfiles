@@ -2,8 +2,6 @@
 
 #Python
 alias pyvenv='python3 -m venv'
-alias cheat='python3 ~/.cheat.d/cheat/cheat.py'
-alias p2='python2'
 alias p3='python3'
 
 #Emacs
@@ -14,15 +12,11 @@ alias ecc='emacsclient -c'
 alias ec='emacsclient'
 
 #Other
+alias lock='swaylock -f -c 5E2750'
 alias nautilus='nautilus --no-desktop'
+alias control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+alias be='bundle exec'
 alias us='setxkbmap -option ctrl:nocaps us'
 alias ru='setxkbmap -option ctrl:nocaps ru'
 alias de='setxkbmap -option ctrl:nocaps de'
 alias де='setxkbmap -option ctrl:nocaps de'
-alias ber='sudo bundle exec rake'
-alias sshuni='ssh bi40resu@dialog.rrze.uni-erlangen.de'
-alias be='bundle exec'
-alias control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
-
-#i3
-alias i3lock='i3lock -f -c 5E2750'
