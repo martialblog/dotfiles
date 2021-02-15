@@ -1,8 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    /* font-family: FiraCode, 'Font Awesome 5', 'SFNS Display',  Helvetica, Arial, sans-serif; */
-    font-family: Hack, 'FontAwesome', sans-serif;
+    font-family: sans-serif;
     font-size: 12px;
     min-height: 0;
     margin: 0;
@@ -11,7 +10,7 @@
 
 window#waybar {
     background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 2px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
 }
 
@@ -23,12 +22,12 @@ window#waybar.hidden {
     padding: 0 10px;
     background: transparent;
     color: #ffffff;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid #ffffff;
+    background: transparent;
+    border-bottom: 2px solid #F58134;
 }
 
 #workspaces button.urgent {
@@ -37,12 +36,12 @@ window#waybar.hidden {
 
 #mode {
     background: #64727D;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 #clock, #custom-clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
     padding: 0 8px;
-    margin: 0 3px;
+    margin: 0 2px;
 }
 
 #clock, #custom-clock {
@@ -90,7 +89,7 @@ window#waybar.hidden {
 }
 
 #backlight {
-    background: #90b1b1;
+    background: #e5707e;
 }
 
 #network {
@@ -102,7 +101,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    background: #f1c40f;
+    background: #fbe698;
     color: #000000;
 }
 

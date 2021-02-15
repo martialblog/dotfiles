@@ -8,8 +8,9 @@
     "modules-right": [
         // "idle_inhibitor",
         // "tray",
-        "pulseaudio",
         "network",
+        "backlight",
+        "pulseaudio",
         "battery",
         "custom/clock"
     ],
@@ -40,8 +41,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "A",
+            "deactivated": "D"
         }
     },
     "tray": {
@@ -66,9 +67,8 @@
         "format": "{}% "
     },
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["L"]
+        "device": "intel_backlight",
+        "format": "L: {percent}% {icon}"
     },
     "battery": {
         "states": {
@@ -76,20 +76,21 @@
             "warning": 30,
             "critical": 20
         },
-       "format": "{capacity}% {icon}",
-       "format-charging": "{capacity}% ",
-       "interval": 30
+       "format": "B: {capacity}% {icon}",
+       "format-charging": "B: {capacity}% ",
+       "interval": 60
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "⚠",
-        "interval" : 15,
+        "on-click": "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center",
+        "interval" : 30,
         "interface": "wlp*"
     },
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "{volume}% {icon}",
+        "format": "V: {volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "M"
         // "on-click": "pavucontrol"

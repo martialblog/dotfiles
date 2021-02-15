@@ -35,6 +35,7 @@ exec swayidle -w \
 input "2:7:SynPS/2_Synaptics_TouchPad" {
   tap enabled
   natural_scroll disabled
+  pointer_accel 0.3
   # middle_emulation enabled
   # dwt enabled
 }
@@ -71,6 +72,8 @@ bindsym $mod+Shift+m exec chromium-browser --incognito
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+bindsym XF86MonBrightnessDown exec ~/.local/bin/intel_backlight.sh -dec 5
+bindsym XF86MonBrightnessUp exec ~/.local/bin/intel_backlight.sh -inc 5
 
 #
 # Moving around:
