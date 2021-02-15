@@ -22,6 +22,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $background ~/Pictures/Wallpapers/spaceblue.png
 output * bg $background fill
 
+# exec --no-startup-id nm-applet
+
 ### Idle configuration
 exec swayidle -w \
      timeout 300 'swaylock -f -c 5E2750' \
@@ -65,6 +67,9 @@ gaps inner 5
 ### Custom bindings
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+n exec nautilus --no-desktop
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 #
 # Moving around:
@@ -179,6 +184,22 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+set $Locker swaylock
+
+set $system_ctl System (l) lock, (e) logout, (s) sleep, (h) hibernate, (r) reboot, (p) poweroff
+mode "$system_ctl" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id swaymsg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym p exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$system_ctl"
+
 client.focused #F58134 #F58134 #F58134 #F58134
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
@@ -191,9 +212,7 @@ client.urgent #2f343a #900000 #ffffff #900000
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    swaybar_command waybar
 
     colors {
            separator #666666
