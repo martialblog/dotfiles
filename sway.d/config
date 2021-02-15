@@ -4,9 +4,9 @@
 set $mod Mod4
 
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
+set $left j
+set $down k
+set $up i
 set $right l
 
 # Your preferred terminal emulator
@@ -61,6 +61,11 @@ gaps inner 5
     bindsym $mod+Shift+c reload
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+### Custom bindings
+bindsym $mod+Shift+b exec firefox
+bindsym $mod+Shift+n exec nautilus --no-desktop
+
 #
 # Moving around:
 #
@@ -118,7 +123,7 @@ gaps inner 5
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -174,6 +179,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+client.focused #F58134 #F58134 #F58134 #F58134
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
+
 #
 # Status Bar:
 #
@@ -183,12 +193,16 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+           separator #666666
+           background #222222
+           statusline #dddddd
+           focused_workspace #0388A6 #0388A6 #ffffff
+           active_workspace #333333 #333333 #ffffff
+           inactive_workspace #333333 #333333 #888888
+           urgent_workspace #2f343a #900000 #ffffff
     }
 }
 
