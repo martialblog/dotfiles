@@ -75,6 +75,8 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 bindsym XF86MonBrightnessDown exec ~/.local/bin/intel_backlight.sh -dec 5
 bindsym XF86MonBrightnessUp exec ~/.local/bin/intel_backlight.sh -inc 5
 
+bindsym print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+
 #
 # Moving around:
 #
