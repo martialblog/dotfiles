@@ -58,6 +58,10 @@ window#waybar.hidden {
     background-color: #26A65B;
 }
 
+#battery.warning:not(.charging) {
+    background-color: #f5c71a;
+}
+
 #temperature {
     background: #f0932b;
 }
@@ -89,7 +93,8 @@ window#waybar.hidden {
 }
 
 #backlight {
-    background: #e5707e;
+    background: #f7d5be;
+    color: #000000;
 }
 
 #network {
@@ -101,7 +106,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    background: #fbe698;
+    background: #f7d5be;
     color: #000000;
 }
 

@@ -59,6 +59,10 @@
         "exec": "date +'%H:%M | %d. %b %Y'",
         "interval": 120
     },
+    "custom/layout": {
+        "exec": "swaymsg -t get_inputs | jq '.[1].xkb_active_layout_name'",
+        "interval": 10
+    },
     "cpu": {
         "format": "{usage}% ",
         "interval": 5
@@ -73,8 +77,8 @@
     "battery": {
         "states": {
             "good": 95,
-            "warning": 30,
-            "critical": 20
+            "warning": 35,
+            "critical": 25
         },
        "format": "B: {capacity}% {icon}",
        "format-charging": "B: {capacity}% ",
