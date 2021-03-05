@@ -39,7 +39,7 @@ window#waybar.hidden {
     border-bottom: 2px solid #ffffff;
 }
 
-#clock, #custom-clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#clock, #custom-clock, #custom-layout, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
     padding: 0 8px;
     margin: 0 2px;
 }
@@ -93,7 +93,7 @@ window#waybar.hidden {
 }
 
 #backlight {
-    background: #f7d5be;
+    background: #F58134;
     color: #000000;
 }
 
@@ -106,13 +106,17 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    background: #f7d5be;
+    background: #F58134;
     color: #000000;
 }
 
 #pulseaudio.muted {
     background: #90b1b1;
     color: #2a5c45;
+}
+
+#custom-layout {
+    background: #2980b9;
 }
 
 #custom-media {

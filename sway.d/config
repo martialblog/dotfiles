@@ -26,8 +26,8 @@ output * bg $background fill
 
 ### Idle configuration
 exec swayidle -w \
-     timeout 300 'swaylock -f -c 5E2750' \
-     timeout 600 'swaymsg "output * dpms off"' \
+     timeout 900 'swaylock -f -c 5E2750' \
+     timeout 900 'swaymsg "output * dpms off"' \
      resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -f -c 5E2750'
 
@@ -66,6 +66,7 @@ gaps inner 5
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 ### Custom bindings
+bindsym $mod+Shift+v exec thunderbird
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+n exec nautilus --no-desktop
 bindsym $mod+Shift+m exec chromium-browser --incognito

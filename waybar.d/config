@@ -8,6 +8,7 @@
     "modules-right": [
         // "idle_inhibitor",
         // "tray",
+        "custom/layout",
         "network",
         "backlight",
         "pulseaudio",
@@ -60,7 +61,7 @@
         "interval": 120
     },
     "custom/layout": {
-        "exec": "swaymsg -t get_inputs | jq '.[1].xkb_active_layout_name'",
+        "exec": "swaymsg -t get_inputs | jq -r '.[1].xkb_active_layout_name'",
         "interval": 10
     },
     "cpu": {
