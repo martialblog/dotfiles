@@ -44,6 +44,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 source $ZSH/oh-my-zsh.sh
 
+# Docker buildkit
+export DOCKER_BUILDKIT=1
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
