@@ -37,7 +37,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git vagrant docker common-aliases)
+plugins=(git vagrant docker golang common-aliases)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/markus/.local/bin"
@@ -52,6 +52,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # golang
 export GOPATH=$HOME/github/go
+export PATH=$PATH:/usr/local/go/bin
 
 # aliases
 if [ -f $HOME/.aliases ]; then

@@ -23,6 +23,7 @@ set $background ~/Pictures/Wallpapers/spaceblue.png
 output * bg $background fill
 
 # exec --no-startup-id nm-applet
+exec --no-startup-id synology-cloud-station-drive
 
 ### Idle configuration
 exec swayidle -w \
