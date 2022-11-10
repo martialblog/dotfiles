@@ -18,6 +18,7 @@
     // Modules configuration
      "sway/workspaces": {
          "format":"{icon}",
+         "enable-bar-scroll": true,
          "format-icons": {
              "1": "1",
              "2": "2",
