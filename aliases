@@ -3,7 +3,7 @@
 #Python
 alias pyvenv='python3 -m venv'
 alias python='python3'
-alias p3='python3'
+alias p='python3'
 
 #Emacs
 alias ecdaemon='test -e "/tmp/emacs1000/server" || emacs --daemon'
