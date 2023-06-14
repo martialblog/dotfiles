@@ -23,7 +23,8 @@ set $background ~/Pictures/Wallpapers/spaceblue.png
 output * bg $background fill
 
 # exec --no-startup-id nm-applet
-exec --no-startup-id synology-cloud-station-drive
+# exec --no-startup-id synology-cloud-station-drive
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 ### Idle configuration
 exec swayidle -w \
@@ -67,8 +68,8 @@ gaps inner 5
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 ### Custom bindings
-bindsym $mod+Shift+v exec MOZ_ENABLE_WAYLAND=1 thunderbird
-bindsym $mod+Shift+b exec MOZ_ENABLE_WAYLAND=1 firefox
+bindsym $mod+Shift+v exec thunderbird
+bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+n exec nautilus --no-desktop
 bindsym $mod+Shift+m exec chromium-browser --incognito
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
