@@ -10,6 +10,7 @@ set $up i
 set $right l
 
 # Your preferred terminal emulator
+# Hint: [Ctrl]+[Shift]+[n] for new term in same dir
 set $term x-terminal-emulator
 
 # Your preferred application launcher
