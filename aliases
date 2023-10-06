@@ -21,3 +21,5 @@ alias us='setxkbmap -option ctrl:nocaps us'
 alias ru='setxkbmap -option ctrl:nocaps ru'
 alias de='setxkbmap -option ctrl:nocaps de'
 alias де='setxkbmap -option ctrl:nocaps de'
+
+alias git-history='git log -p --'
