@@ -59,14 +59,10 @@ if [ -f $HOME/.aliases ]; then
     source $HOME/.aliases
 fi
 
-if [ -d "$HOME/Code/platform-tools" ] ; then
- export PATH="$HOME/Code/platform-tools:$PATH"
-fi
-
 if [ -d "$HOME/github/go/bin/" ] ; then
  export PATH="$HOME/github/go/bin/:$PATH"
 fi
 
-if [ -d "$HOME/.gem/ruby/2.7.0/bin" ] ; then
- export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ] ; then
+ export PATH="$HOME/.cargo/bin/:$PATH"
 fi
