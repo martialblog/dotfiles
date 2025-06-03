@@ -1,6 +1,9 @@
-# Read `man 5 sway` for a complete reference.
+# Note:
+# If GTK Apps make troube:
+# sudo apt remove xdg-desktop-portal-gnome
 
 ### Variables
+# Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
 # Home row direction keys, like vim
@@ -10,45 +13,34 @@ set $up i
 set $right l
 
 # Your preferred terminal emulator
-# Hint: [Ctrl]+[Shift]+[n] for new term in same dir
+# set $term foot
 set $term x-terminal-emulator
 
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show run | xargs swaymsg exec
 
-### Output configuration
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-set $background ~/Pictures/Wallpapers/spaceblue.png
-output * bg $background fill
-
-# exec --no-startup-id nm-applet
-# exec --no-startup-id synology-cloud-station-drive
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 ### Idle configuration
-exec swayidle -w \
-     timeout 900 'swaylock -f -c 5E2750' \
-     timeout 900 'swaymsg "output * dpms off"' \
-     resume 'swaymsg "output * dpms on"' \
-     before-sleep 'swaylock -f -c 5E2750'
 
-### Input configuration
-input "2:7:SynPS/2_Synaptics_TouchPad" {
-  tap enabled
-  natural_scroll disabled
-  pointer_accel 0.3
-  # middle_emulation enabled
-  # dwt enabled
-}
+### Locker
+set $Locker swaylock
+# exec swayidle -w \
+#     timeout 580 'swaylock -f -c F15A22' \
+#     timeout 580 'swaymsg "output * dpms off"' \
+#     resume 'swaymsg "output * dpms on"' \
+#     before-sleep 'swaylock -f -c F15A22'
 
-input "type:keyboard" {
-  xkb_layout us,de
-  xkb_options grp:win_space_toggle,ctrl:nocaps
-}
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+### Startup Applications
+exec nm-applet
+exec mako
+exec nextcloud --background
+
+### Custom Keybinds
+bindsym $mod+Shift+b exec firefox
+bindsym $mod+Shift+n exec nautilus --no-desktop
+bindsym $mod+Shift+m exec chromium-browser --incognito
 
 ### Window borders
 default_border pixel 3
@@ -59,27 +51,40 @@ hide_edge_borders smart
 smart_gaps on
 gaps inner 5
 
+### Input configuration
+input "type:touchpad" {
+  tap enabled
+  natural_scroll disabled
+  pointer_accel 0.3
+}
+
+input "type:keyboard" {
+  xkb_layout us,de
+  xkb_options grp:win_space_toggle,ctrl:nocaps
+}
+
 ### Key bindings
+    # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Kill focused window
     bindsym $mod+Shift+q kill
+
+    # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
     floating_modifier $mod normal
+
+    # Reload the configuration file
     bindsym $mod+Shift+c reload
+
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-
-### Custom bindings
-bindsym $mod+Shift+v exec thunderbird
-bindsym $mod+Shift+b exec firefox
-bindsym $mod+Shift+n exec nautilus --no-desktop
-bindsym $mod+Shift+m exec chromium-browser --incognito
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-bindsym XF86MonBrightnessDown exec ~/.local/bin/intel_backlight.sh -dec 5
-bindsym XF86MonBrightnessUp exec ~/.local/bin/intel_backlight.sh -inc 5
-
-bindsym print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 #
 # Moving around:
@@ -109,27 +114,27 @@ bindsym print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -138,7 +143,7 @@ bindsym print exec --no-startup-id slurp | grim -g - $(xdg-user-dir PICTURES)/$(
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+h splith
+    bindsym $mod+b splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -177,16 +182,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 50px
-    bindsym $down resize grow height 50px
-    bindsym $up resize shrink height 50px
-    bindsym $right resize grow width 50px
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 50px
-    bindsym Down resize grow height 50px
-    bindsym Up resize shrink height 50px
-    bindsym Right resize grow width 50px
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -194,8 +199,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $Locker swaylock
-
+### System Control
 set $system_ctl System (l) lock, (e) logout, (s) sleep, (h) hibernate, (r) reboot, (p) poweroff
 mode "$system_ctl" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -208,17 +212,9 @@ mode "$system_ctl" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$system_ctl"
+bindsym $mod+Shift+p mode "$system_ctl"
 
-client.focused #F58134 #F58134 #F58134 #F58134
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
+### Status Bar:
 bar {
     position top
 
