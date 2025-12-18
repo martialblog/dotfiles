@@ -1,10 +1,9 @@
 [user]
-    email = markus@martialblog.de
     name = Markus Opolka
-[init]
-    defaultBranch = main
 [push]
     default = simple
+[init]
+    defaultBranch = main
 [fetch]
     prune = true
 [core]
@@ -24,3 +23,12 @@
 [color "status"]
     changed = yellow
     untracked = red
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
