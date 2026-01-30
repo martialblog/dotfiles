@@ -1,0 +1,109 @@
+[legacy]
+default-show-menubar=false
+headerbar=@mb false
+new-terminal-mode='tab'
+theme-variant='dark'
+
+[legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '8a715a8e-0ef1-4918-ae38-ce295d374448', '484d3ce2-7026-4542-a699-0f82e49f1380', '1a180978-d001-4520-85da-271daa090a31', '8b45d8a5-7664-4100-a61c-8de8f339eaf3', '75e6430c-6f7b-4cc3-8d87-b47e1b043492', 'eeb8e6b5-de51-40fe-aed6-df25ecfa3f29']
+
+[legacy/profiles:/:1a180978-d001-4520-85da-271daa090a31]
+audible-bell=false
+background-color='rgb(40,69,53)'
+background-transparency-percent=33
+font='Ubuntu Mono 13'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Verde'
+
+[legacy/profiles:/:484d3ce2-7026-4542-a699-0f82e49f1380]
+audible-bell=false
+background-color='rgb(40,40,69)'
+background-transparency-percent=33
+font='Ubuntu Mono 13'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Blu'
+
+[legacy/profiles:/:75e6430c-6f7b-4cc3-8d87-b47e1b043492]
+audible-bell=false
+background-color='rgb(238,238,236)'
+background-transparency-percent=15
+default-size-columns=40
+font='Ubuntu Mono 22'
+foreground-color='rgb(46,52,54)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='Schulung'
+
+[legacy/profiles:/:8a715a8e-0ef1-4918-ae38-ce295d374448]
+audible-bell=false
+background-color='rgb(69,40,41)'
+background-transparency-percent=33
+font='Ubuntu Mono 13'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Rosso'
+
+[legacy/profiles:/:8b45d8a5-7664-4100-a61c-8de8f339eaf3]
+audible-bell=false
+background-color='rgb(238,238,236)'
+background-transparency-percent=33
+font='Ubuntu Mono 13'
+foreground-color='rgb(46,52,54)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Light'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+background-color='rgb(23,20,33)'
+background-transparency-percent=33
+default-size-columns=90
+default-size-rows=50
+font='Ubuntu Mono 13'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Default'
+
+[legacy/profiles:/:eeb8e6b5-de51-40fe-aed6-df25ecfa3f29]
+audible-bell=false
+background-color='rgb(69,40,69)'
+background-transparency-percent=33
+font='Ubuntu Mono 13'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(30,107,201)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Viola'
